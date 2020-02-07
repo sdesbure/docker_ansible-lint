@@ -15,7 +15,7 @@ LABEL org.label-schema.vcs-ref=$VCS_REF \
 WORKDIR /playbooks
 
 RUN apk add --no-cache build-base libffi-dev libressl-dev && \
-    pip install ansible-lint && \
+    pip install pyyaml==3.13 ansible-lint && \
     rm -rf ~/.cache/pip && \
     apk del build-base
 
